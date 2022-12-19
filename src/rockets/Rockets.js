@@ -1,3 +1,3 @@
 export default function Rockets() {
-  return (<div>Rockets!</div>)
+  return (<div>Rockets!</div>);
 }
