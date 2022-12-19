@@ -1,0 +1,11 @@
+.navbar-logo {
+  width: 5%;
+  height: auto;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+.active-link {
+  border-bottom: 1px solid black;
+}
