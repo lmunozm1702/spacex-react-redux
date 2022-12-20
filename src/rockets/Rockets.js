@@ -1,22 +1,19 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable no-unused-vars */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import store from '../ConfigStore';
-import getRockets from './getRocketsAPI';
 
 const Rockets = () => {
-  console.log('Hi from Rockets()');
-  const rocketList = useSelector((state) => state);
-
-  useEffect(() => {
-    store.dispatch(getRockets());
-  }, []);
-
+  const rocketList = useSelector((state) => state.rockets);
   return (
-    <div>
-      Rockets!
-
-    </div>
+    rocketList.map((rocket) => (
+      <div key={rocket.id}>
+        <div>{rocket.id}</div>
+        <div>{rocket.name}</div>
+        <div>{rocket.type}</div>
+        <div>{rocket.images}</div>
+      </div>
+    ))
   );
 };
 

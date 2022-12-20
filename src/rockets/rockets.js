@@ -1,20 +1,7 @@
-const FETCH_ROCKETS = 'spaceTravelers/rockets/FETCH_ROCKETS';
-const FETCH_ROCKETS_FULFILLED = 'spaceTravelers/rockets/FETCH_ROCKETS/fulfilled';
+const FETCH_ROCKETS = 'rockets/getRockets';
+const FETCH_ROCKETS_FULFILLED = 'rockets/getRockets/fulfilled';
 
-export function fetchRockets(rocketList) {
-  console.log('fetchRockets', rocketList);
-  let payload = [];
-  rocketList.forEach((element) => {
-    payload = [
-      ...payload,
-      {
-        id: element.id,
-        name: element.rocket_name,
-        type: element.rocket_type,
-        images: element.flickr_images,
-      }];
-  });
-  console.log('payload', payload);
+export function fetchRockets(payload) {
   return {
     type: FETCH_ROCKETS,
     payload,
@@ -22,10 +9,20 @@ export function fetchRockets(rocketList) {
 }
 
 export default function reducer(state = [], action = {}) {
-  console.log('***1***', action.payload);
+  let result = [];
   switch (action.type) {
-    case FETCH_ROCKETS:
-      return [...state, action.payload];
+    case FETCH_ROCKETS_FULFILLED:
+      action.payload.forEach((element) => {
+        result = [
+          ...result,
+          {
+            id: element.id,
+            name: element.rocket_name,
+            type: element.rocket_type,
+            images: element.flickr_images,
+          }];
+      });
+      return [...result];
     default:
       return [...state];
   }
