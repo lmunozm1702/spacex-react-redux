@@ -1,11 +1,18 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import getRockets from './rockets/getRocketsAPI';
+import store from './ConfigStore';
 import Navbar from './navbar/Navbar';
-import Rockets from './rockets/Rockets';
 import Missions from './missions/Missions';
 import MyProfile from './myprofile/MyProfile';
+import Rockets from './rockets/Rockets';
 import './App.css';
 
 function App() {
+  useEffect(() => {
+    store.dispatch(getRockets());
+  }, []);
+
   return (
     <BrowserRouter>
       <Navbar />
