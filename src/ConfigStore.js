@@ -1,5 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
-import rockets from './rockets/rockets';
+import rockets from './rockets/rocketsReducer';
 import missions from './missions/missionsReducer';
 import MyProfile from './myprofile/MyProfile';
 
