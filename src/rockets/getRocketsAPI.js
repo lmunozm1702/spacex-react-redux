@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { fetchRockets } from './rockets';
+import { fetchRockets } from './rocketsReducer';
 
 const FETCH_ROCKETS_URL = 'https://api.spacexdata.com/v3/rockets';
 const FETCH_ROCKETS = 'rockets/getRockets';
