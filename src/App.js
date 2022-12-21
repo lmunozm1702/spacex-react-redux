@@ -5,7 +5,7 @@ import store from './ConfigStore';
 import Navbar from './navbar/Navbar';
 import Missions from './missions/Missions';
 import MyProfile from './myprofile/MyProfile';
-import Rockets from './rockets/Rockets';
+import Rocket from './rockets/Rocket';
 import './App.css';
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
       <Navbar />
       <div className="container">
         <Routes>
-          <Route path="/" element={<Rockets />} />
+          <Route path="/" element={<Rocket />} />
           <Route path="/missions" element={<Missions />} />
           <Route path="/myprofile" element={<MyProfile />} />
         </Routes>
