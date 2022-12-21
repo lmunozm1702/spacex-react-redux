@@ -3,7 +3,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
-const Rocket = () => {
+const Rockets = () => {
   const rocketList = useSelector((state) => state.rockets);
   return rocketList.map((rocket) => (
     <div key={rocket.id}>
@@ -15,4 +15,4 @@ const Rocket = () => {
   ));
 };
 
-export default Rocket;
+export default Rockets;
