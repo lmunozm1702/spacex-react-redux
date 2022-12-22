@@ -33,7 +33,6 @@ export default function reducer(state = [], action = {}) {
       });
       return [...result];
     case RESERVE_ROCKET:
-      // aqui poner el MAP!!! para modificar el reserved when id === map.id
       return state.map((rocket) => (rocket.id === action.payload
         ? { ...rocket, reserved: !rocket.reserved }
         : rocket));
