@@ -10,12 +10,3 @@ const getMissions = createAsyncThunk(GET_MISSIONS, async (_, thunkAPI) => {
 });
 
 export default getMissions;
-
-// const getRockets = createAsyncThunk(FETCH_ROCKETS, async () => {
-//   const response = await fetch(FETCH_ROCKETS_URL, {
-//     method: 'GET',
-//   });
-//   const responseJSON = await response.json();
-
-//   return responseJSON;
-// });
