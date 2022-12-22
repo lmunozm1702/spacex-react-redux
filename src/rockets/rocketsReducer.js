@@ -42,5 +42,5 @@ export default function reducer(state = [], action = {}) {
 }
 
 export {
-  FETCH_ROCKETS, FETCH_ROCKETS_FULFILLED, reserveRocket, fetchRockets,
+  FETCH_ROCKETS, FETCH_ROCKETS_FULFILLED, RESERVE_ROCKET, reserveRocket, fetchRockets,
 };

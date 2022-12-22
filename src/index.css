@@ -27,3 +27,7 @@ h3 {
   font-size: 3vh;
   font-weight: 700;
 }
+
+ul {
+  list-style: none;
+}

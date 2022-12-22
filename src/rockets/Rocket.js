@@ -15,7 +15,7 @@ const Rocket = (props) => {
   };
 
   return (
-    <li key={id} className="rocket-item">
+    <div key={id} className="rocket-item" id="item-rocket">
       <div>
         <div><img className="rocket-list-image" alt={name} src={images} /></div>
       </div>
@@ -33,10 +33,10 @@ const Rocket = (props) => {
           <button className="cancel-button" type="button" onClick={handleReserveButton}>Cancel Reservation</button>
         )}
         {!reserved && (
-          <button className="reserve-button" type="button" onClick={handleReserveButton}>Reserve Rocket</button>
+          <button className="reserve-button" type="button" name="ReserveButton" onClick={handleReserveButton}>Reserve Rocket</button>
         )}
       </div>
-    </li>
+    </div>
   );
 };
 
