@@ -3,27 +3,29 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import store from '../ConfigStore';
 import { changeStatus } from './missionsReducer';
+import './Missions.css';
 
 const Missions = () => {
   const missionList = useSelector((state) => state.missions);
-
-  const colWidth1 = { width: '11%' };
-  const colWidth2 = { width: '14%' };
-  const centered = { textAlign: 'center' };
-
   const handleUpdate = (mission) => {
     store.dispatch(changeStatus(mission));
   };
 
   return (
     <>
-      <table className="table table-striped table-bordered mt-5">
+      <table className="missions-table">
+        <colgroup>
+          <col className="col1" />
+          <col className="col2" />
+          <col className="col3" />
+          <col className="col4" />
+        </colgroup>
         <thead>
           <tr>
-            <th style={colWidth1}>Mission</th>
+            <th>Mission</th>
             <th>Description</th>
-            <th style={colWidth2}>Status</th>
-            <th style={colWidth2} />
+            <th>Status</th>
+            <th />
           </tr>
         </thead>
         <tbody>
@@ -31,12 +33,12 @@ const Missions = () => {
             <tr key={mission.id}>
               <td className="fw-bold">{mission.name}</td>
               <td>{mission.description}</td>
-              <td className="align-middle" style={centered}>
+              <td className="align-middle">
                 <span
                   className={
-                    mission.status === 'NOT A MEMBER'
-                      ? 'badge bg-secondary'
-                      : 'badge bg-primary'
+                    mission.reserved
+                      ? 'mission-reserved-badge'
+                      : 'not-reserved-badge'
                   }
                 >
                   {mission.status}
@@ -47,9 +49,7 @@ const Missions = () => {
                   onClick={() => handleUpdate(mission)}
                   type="button"
                   className={
-                    mission.status === 'NOT A MEMBER'
-                      ? 'btn btn-outline-dark'
-                      : 'btn btn-outline-danger'
+                    mission.reserved ? 'button reserved' : 'button not-reserved'
                   }
                 >
                   {mission.join}

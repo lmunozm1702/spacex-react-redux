@@ -6,7 +6,7 @@ export default function MyProfile() {
   return (
     <div className="profile-div">
       <div className="profile-item">
-        <h3 id="rockets-title">My Rockets</h3>
+        <h3 id="rockets-title">My Missions</h3>
         <MyMissions />
       </div>
       <div className="profile-item">

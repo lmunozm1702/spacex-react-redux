@@ -27,7 +27,7 @@ const missionsReducer = (state = [], action = {}) => {
             description: element.description,
             reserved: false,
             status: 'NOT A MEMBER',
-            join: 'Join Missions',
+            join: 'Join Mission',
           },
         ];
       });
@@ -40,7 +40,7 @@ const missionsReducer = (state = [], action = {}) => {
           ...action.payload,
           reserved: !action.payload.reserved,
           status: action.payload.reserved ? 'NOT A MEMBER' : 'Active Member',
-          join: action.payload.reserved ? 'Join Missions' : 'Leave Missions',
+          join: action.payload.reserved ? 'Join Mission' : 'Leave Mission',
         },
         ...state.slice(index + 1),
       ];

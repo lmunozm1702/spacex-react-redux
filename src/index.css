@@ -19,6 +19,7 @@ button {
   font-size: 1.8vh;
   padding: 5px 10px;
   margin-top: 5px;
+  cursor: pointer;
 }
 
 h1 {
@@ -43,4 +44,11 @@ ul {
 
 a {
   text-decoration: none;
+}
+
+table,
+th,
+td {
+  border: 1px solid gray;
+  border-collapse: collapse;
 }
