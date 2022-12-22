@@ -1,7 +1,7 @@
 import React from 'react';
-import Missions from './Missions';
 import { Provider } from 'react-redux';
 import { render } from '@testing-library/react';
+import Missions from './Missions';
 import store from '../ConfigStore';
 import getMissions from './missionsAPI';
 import { fetchMissions, changeStatus } from './missionsReducer';
@@ -11,7 +11,7 @@ it('Testing Rockets Page', () => {
   const tree = render(
     <Provider store={store}>
       <Missions url="/missions" />
-    </Provider>
+    </Provider>,
   );
   expect(tree).toMatchSnapshot();
 });
