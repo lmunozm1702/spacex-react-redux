@@ -11,7 +11,7 @@ const Rockets = () => {
     <ul id="rocket-ul">
       {
         rocketList.map((rocket) => (
-          <li key={rocket.id}>
+          <li className="rocket-li" key={rocket.id}>
             <Rocket
               id={rocket.id}
               name={rocket.name}
