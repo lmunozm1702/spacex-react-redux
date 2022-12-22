@@ -6,7 +6,6 @@ import Rocket from './Rocket';
 
 const Rockets = () => {
   const rocketList = useSelector((state) => state.rockets);
-  console.log('rocketList', rocketList);
   return (
     rocketList.map((rocket) => (
       <div key={rocket.id}>

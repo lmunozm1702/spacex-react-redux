@@ -11,7 +11,6 @@ const Rocket = (props) => {
 
   const handleReserveButton = (event) => {
     event.preventDefault();
-    console.log('handleReserveButton', event);
     dispatch(reserveRocket(id));
   };
 
