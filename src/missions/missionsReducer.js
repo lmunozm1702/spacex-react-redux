@@ -35,7 +35,6 @@ const missionsReducer = (state = [], action = {}) => {
     case STATUS_UPDATED: {
       const index = state.indexOf(action.payload);
       newState = [
-        // ...state.filter((mission) => mission.id !== action.payload.id),
         ...state.slice(0, index),
         {
           ...action.payload,
