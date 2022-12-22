@@ -26,8 +26,8 @@ export default function reducer(state = [], action = {}) {
           {
             id: element.id,
             name: element.rocket_name,
-            type: element.rocket_type,
             images: element.flickr_images,
+            description: element.description,
             reserved: false,
           }];
       });
