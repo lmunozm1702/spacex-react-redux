@@ -1,0 +1,67 @@
+tbody tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+
+.missions-table {
+  width: 100%;
+}
+.missions-table th {
+  text-align: start;
+  padding-left: 2px;
+}
+
+.fw-bold {
+  font-size: 2.2vh;
+  font-weight: 700;
+  vertical-align: top;
+  padding-left: 2px;
+}
+
+.align-middle {
+  text-align: center;
+}
+
+.col1 {
+  width: 10%;
+}
+.col2 {
+  width: 70%;
+}
+.col3 {
+  width: 10%;
+}
+.col4 {
+  width: 10%;
+}
+
+.mission-reserved-badge {
+  border: 0;
+  border-radius: 4px;
+  padding: 3px 7px;
+  margin-right: 2px;
+  background-color: cornflowerblue;
+  color: white;
+  font-size: 1.8vh;
+}
+
+.not-reserved-badge {
+  border: 0;
+  border-radius: 4px;
+  padding: 3px 7px;
+  margin-right: 2px;
+  background-color: gray;
+  color: white;
+  font-size: 1.8vh;
+}
+
+.reserved {
+  color: red;
+  border: 1px solid red;
+  background-color: inherit;
+}
+
+.not-reserved {
+  color: gray;
+  border: 1px solid gray;
+  background-color: inherit;
+}
