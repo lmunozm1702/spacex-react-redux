@@ -52,7 +52,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Blog App] <a name="about-project"></a>
+# 📖 [Spcae Travelers Hub] <a name="about-project"></a>
 
 > This is an app that lets you view different rockets list and missions list and be able to reserve a rocket and join a mission.
 
