@@ -1,5 +1,6 @@
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 import React, { useEffect } from 'react';
+import getMissions from './missions/missionsAPI';
 import getRockets from './rockets/getRocketsAPI';
 import store from './ConfigStore';
 import Navbar from './navbar/Navbar';
@@ -11,6 +12,7 @@ import './App.css';
 function App() {
   useEffect(() => {
     store.dispatch(getRockets());
+    store.dispatch(getMissions());
   }, []);
 
   return (

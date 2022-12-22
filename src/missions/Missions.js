@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useSelector } from 'react-redux';
-import getMissions from './missionsAPI';
 import store from '../ConfigStore';
 import { changeStatus } from './missionsReducer';
 
@@ -11,10 +10,6 @@ const Missions = () => {
   const colWidth1 = { width: '11%' };
   const colWidth2 = { width: '14%' };
   const centered = { textAlign: 'center' };
-
-  useEffect(() => {
-    store.dispatch(getMissions());
-  }, []);
 
   const handleUpdate = (mission) => {
     store.dispatch(changeStatus(mission));
