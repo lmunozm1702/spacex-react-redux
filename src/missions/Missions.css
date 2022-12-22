@@ -5,6 +5,7 @@ tbody tr:nth-child(odd) {
 .missions-table {
   width: 100%;
 }
+
 .missions-table th {
   text-align: start;
   padding-left: 2px;
@@ -24,12 +25,15 @@ tbody tr:nth-child(odd) {
 .col1 {
   width: 10%;
 }
+
 .col2 {
   width: 70%;
 }
+
 .col3 {
   width: 10%;
 }
+
 .col4 {
   width: 10%;
 }

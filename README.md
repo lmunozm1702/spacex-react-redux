@@ -1,70 +1,220 @@
-# Getting Started with Create React App
+<!--
+HOW TO USE:
+This is an example of how you may give instructions on setting up your project locally.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Modify this file to match your project and remove sections that don't apply.
 
-## Available Scripts
+REQUIRED SECTIONS:
+- Table of Contents
+- About the Project
+  - Built With
+  - Live Demo
+- Getting Started
+- Authors
+- Future Features
+- Contributing
+- Show your support
+- Acknowledgements
+- License
 
-In the project directory, you can run:
+After you're finished please remove all the comments and instructions!
+-->
 
-### `npm start`
+<div align="center">
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+ <h1><b>Space Travelers Hub</b></h1>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+</div>
 
-### `npm test`
+<!-- TABLE OF CONTENTS -->
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 📗 Table of Contents
 
-### `npm run build`
+- [📖 About the Project](#about-project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [🚀 Live Demo](#live-demo)
+- [💻 Getting Started](#getting-started)
+  - [Setup](#setup)
+  - [Prerequisites](#prerequisites)
+  - [Install](#install)
+  - [Usage](#usage)
+  - [Run tests](#run-tests)
+  - [Deployment](#triangular_flag_on_post-deployment)
+- [👥 Authors](#authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#support)
+- [🙏 Acknowledgements](#acknowledgements)
+- [❓ FAQ](#faq)
+- [📝 License](#license)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- PROJECT DESCRIPTION -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# 📖 [Blog App] <a name="about-project"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> This is an app that lets you view different rockets list and missions list and be able to reserve a rocket and join a mission.
 
-### `npm run eject`
+## 🛠 Built With <a name="built-with"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Tech Stack <a name="tech-stack"></a>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+<details>
+  <summary>React</summary>
+</details>
+<details>
+  <summary>Redux</summary>
+</details>
+<details>
+  <summary>Javascript</summary>
+</details>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<!-- Features -->
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Key Features <a name="key-features"></a>
 
-## Learn More
+- **Reserve A Rocket**
+- **Join A Mission**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<!-- LIVE DEMO -->
 
-### Code Splitting
+## 🚀 Live Demo <a name="live-demo"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+> Please click the link below to check the **demo**
 
-### Analyzing the Bundle Size
+- [Live Demo Link](https://github.)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Making a Progressive Web App
+<!-- GETTING STARTED -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 💻 Getting Started <a name="getting-started"></a>
 
-### Advanced Configuration
+> In this app, we have different topics being fetched from the API. You then can join mission and reserve a rocket. The app is built with React, Redux and JavaScript. You should develop a first working version of the app following a wireframe.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To get a local copy up and running, follow these steps:
 
-### Deployment
+- Clone the project from this link: [https://github.com/lmunozm1702/spacex-react-redux.git](https://github.com/lmunozm1702/spacex-react-redux.git)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Prerequisites
 
-### `npm run build` fails to minify
+In order to run this project you need:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Web browser
+- Code editor
+- Good internet connection
+<!--
+Example command:
+
+```sh
+ gem install rails
+```
+
+-->
+
+### Setup
+
+Clone this repository to your desired folder by using the following command:
+
+```sh
+  cd my-folder
+  git clone https://github.com/lmunozm1702/spacex-react-redux.git
+```
+
+### Install
+
+Install these npm dependencies by running the commands below:
+
+```sh
+  cd spacex-react-redux
+  npm install
+```
+
+### Usage
+
+To run the project, execute the following command:
+
+```sh
+  npm start
+```
+
+This will open the browser and be able to pull data from the server
+
+### Run tests
+
+To run tests, run the following command:
+
+```sh
+  npm test
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Luis Muñoz**
+
+- GitHub: [@lmunozm1702](https://github.com/lmunozm1702)
+- Email: [l.munoz.m@outlook.com](mailto:l.munoz.m@outlook.com)
+- Twitter: [@lmunozm1702](www.twitter.com/lmunozm1702)
+
+👤 **Amanuel Galema**
+
+- GitHub: [@amexabee](https://github.com/amexabee)
+- Email: [amexabee@yahoo.com](mailto:amexabee@yahoo.com)
+- Twitter: [@i_amanuel](www.twitter.com/i_amanuel)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like our project, please reach out and support us
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
+I would like to thank all who inspired us during the project
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FAQ (optional) -->
+
+## ❓ FAQ <a name="faq"></a>
+
+> Add at least 2 questions new developers would ask when they decide to use your project.
+
+- **Can i run it on my local machine or do i need to host it on the internet?**
+
+  - [Yes you can run it on your local machine. Just make sure that you install the required dependecies as stated in the installation part above]
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./LICENSE) licensed.
+
+_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
