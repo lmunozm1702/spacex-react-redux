@@ -8,5 +8,36 @@
 }
 
 .active-link {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid cornflowerblue;
+}
+
+.nav-bar {
+  display: flex;
+}
+
+.nav-brand {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-brand h1 {
+  color: #000;
+}
+
+.nav-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  white-space: nowrap;
+  color: cornflowerblue;
+}
+
+.nav-list a {
+  color: cornflowerblue;
+}
+
+.container {
+  border-bottom: 1px solid #ccc;
 }
