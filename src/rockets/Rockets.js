@@ -8,17 +8,21 @@ import './Rockets.css';
 const Rockets = () => {
   const rocketList = useSelector((state) => state.rockets);
   return (
-    rocketList.map((rocket) => (
-      <ul key={rocket.id}>
-        <Rocket
-          id={rocket.id}
-          name={rocket.name}
-          images={rocket.images[0]}
-          reserved={rocket.reserved}
-          description={rocket.description}
-        />
-      </ul>
-    ))
+    <ul id="rocket-ul">
+      {
+        rocketList.map((rocket) => (
+          <li key={rocket.id}>
+            <Rocket
+              id={rocket.id}
+              name={rocket.name}
+              images={rocket.images[0]}
+              reserved={rocket.reserved}
+              description={rocket.description}
+            />
+          </li>
+        ))
+      }
+    </ul>
   );
 };
 
