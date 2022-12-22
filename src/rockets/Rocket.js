@@ -4,7 +4,7 @@ import { reserveRocket } from './rocketsReducer';
 
 const Rocket = (props) => {
   const {
-    id, name, type, images,
+    id, name, type, images, reserved,
   } = props;
 
   const dispatch = useDispatch();
@@ -17,10 +17,21 @@ const Rocket = (props) => {
 
   return (
     <div key={id}>
-      <div>{name}</div>
+      <div>
+        {reserved && (
+          <span className="reserved-badge">Reserved</span>
+        )}
+        {name}
+      </div>
       <div>{type}</div>
       <div>{images}</div>
-      <button type="button" onClick={handleReserveButton}>Reserve Rocket</button>
+      {reserved && (
+        <button type="button" onClick={handleReserveButton}>Cancel Reservation</button>
+      )}
+      {!reserved && (
+        <button type="button" onClick={handleReserveButton}>Reserve Rocket</button>
+      )}
+
     </div>
   );
 };
@@ -30,6 +41,7 @@ Rocket.propTypes = {
   name: PropTypes.string.isRequired,
   type: PropTypes.string.isRequired,
   images: PropTypes.string.isRequired,
+  reserved: PropTypes.string.isRequired,
 };
 
 export default Rocket;
