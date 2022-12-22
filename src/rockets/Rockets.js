@@ -3,20 +3,21 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import Rocket from './Rocket';
+import './Rockets.css';
 
 const Rockets = () => {
   const rocketList = useSelector((state) => state.rockets);
   return (
     rocketList.map((rocket) => (
-      <div key={rocket.id}>
+      <ul key={rocket.id}>
         <Rocket
           id={rocket.id}
           name={rocket.name}
-          type={rocket.type}
           images={rocket.images[0]}
           reserved={rocket.reserved}
+          description={rocket.description}
         />
-      </div>
+      </ul>
     ))
   );
 };

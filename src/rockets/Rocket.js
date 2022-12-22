@@ -4,7 +4,7 @@ import { reserveRocket } from './rocketsReducer';
 
 const Rocket = (props) => {
   const {
-    id, name, type, images, reserved,
+    id, name, images, reserved, description,
   } = props;
 
   const dispatch = useDispatch();
@@ -15,32 +15,37 @@ const Rocket = (props) => {
   };
 
   return (
-    <div key={id}>
+    <li key={id} className="rocket-item">
       <div>
-        {reserved && (
-          <span className="reserved-badge">Reserved</span>
-        )}
-        {name}
+        <div><img className="rocket-list-image" alt={name} src={images} /></div>
       </div>
-      <div>{type}</div>
-      <div>{images}</div>
-      {reserved && (
-        <button type="button" onClick={handleReserveButton}>Cancel Reservation</button>
-      )}
-      {!reserved && (
-        <button type="button" onClick={handleReserveButton}>Reserve Rocket</button>
-      )}
-
-    </div>
+      <div>
+        <h3>
+          {name}
+        </h3>
+        <div>
+          {reserved && (
+            <span className="reserved-badge">Reserved</span>
+          )}
+          {description}
+        </div>
+        {reserved && (
+          <button className="cancel-button" type="button" onClick={handleReserveButton}>Cancel Reservation</button>
+        )}
+        {!reserved && (
+          <button className="reserve-button" type="button" onClick={handleReserveButton}>Reserve Rocket</button>
+        )}
+      </div>
+    </li>
   );
 };
 
 Rocket.propTypes = {
   id: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
   images: PropTypes.string.isRequired,
   reserved: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
 };
 
 export default Rocket;
