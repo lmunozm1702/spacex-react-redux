@@ -25,6 +25,7 @@ const missionsReducer = (state = [], action = {}) => {
             id: element.mission_id,
             name: element.mission_name,
             description: element.description,
+            reserved: false,
             status: 'NOT A MEMBER',
             join: 'Join Missions',
           },
@@ -32,19 +33,17 @@ const missionsReducer = (state = [], action = {}) => {
       });
       return newState;
     case STATUS_UPDATED: {
+      const index = state.indexOf(action.payload);
       newState = [
-        ...state.filter((mission) => mission.id !== action.payload.id),
+        // ...state.filter((mission) => mission.id !== action.payload.id),
+        ...state.slice(0, index),
         {
           ...action.payload,
-          status:
-            action.payload.status === 'NOT A MEMBER'
-              ? 'ACTIVE MEMBER'
-              : 'NOT A MEMBER',
-          join:
-            action.payload.status === 'NOT A MEMBER'
-              ? 'Leave Missions'
-              : 'Join Missions',
+          reserved: !action.payload.reserved,
+          status: action.payload.reserved ? 'NOT A MEMBER' : 'Active Member',
+          join: action.payload.reserved ? 'Join Missions' : 'Leave Missions',
         },
+        ...state.slice(index + 1),
       ];
       return newState;
     }
@@ -54,16 +53,3 @@ const missionsReducer = (state = [], action = {}) => {
 };
 
 export default missionsReducer;
-
-// case FETCH_ROCKETS_FULFILLED:
-//       action.payload.forEach((element) => {
-//         result = [
-//           ...result,
-//           {
-//             id: element.id,
-//             name: element.rocket_name,
-//             type: element.rocket_type,
-//             images: element.flickr_images,
-//           }];
-//       });
-//       return [...result];

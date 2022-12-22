@@ -8,7 +8,8 @@ import { changeStatus } from './missionsReducer';
 const Missions = () => {
   const missionList = useSelector((state) => state.missions);
 
-  const colWidth = { width: '14%' };
+  const colWidth1 = { width: '11%' };
+  const colWidth2 = { width: '14%' };
   const centered = { textAlign: 'center' };
 
   useEffect(() => {
@@ -21,19 +22,19 @@ const Missions = () => {
 
   return (
     <>
-      <table className="table table-striped table-bordered">
+      <table className="table table-striped table-bordered mt-5">
         <thead>
           <tr>
-            <th>Mission</th>
-            <th>Discription</th>
-            <th style={colWidth}>Status</th>
-            <th style={colWidth} />
+            <th style={colWidth1}>Mission</th>
+            <th>Description</th>
+            <th style={colWidth2}>Status</th>
+            <th style={colWidth2} />
           </tr>
         </thead>
         <tbody>
           {missionList.map((mission) => (
             <tr key={mission.id}>
-              <td>{mission.name}</td>
+              <td className="fw-bold">{mission.name}</td>
               <td>{mission.description}</td>
               <td className="align-middle" style={centered}>
                 <span
